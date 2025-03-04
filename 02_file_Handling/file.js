@@ -23,4 +23,18 @@ fs.readFile('./contact.txt', "utf-8", (err, result)=>{ //takes a callback with e
 })
 
 //____________________________________________________________________________________
-fs.appendFileSync('./test.txt', new Date().getDate().toLocaleString());
+fs.appendFileSync('./test1.txt', new Date().getDate().toLocaleString());
+fs.appendFileSync('./test1.txt', `Hey There\n`)
+
+//copy
+fs.cpSync("./test.txt","./copy.txt")
+
+// unlink / delete
+fs.unlinkSync("./copy.txt")
+
+// file stats
+console.log(fs.statSync("./test.txt"))
+
+//make directory
+// fs.mkdirSync("my-docs");
+fs.mkdirSync("my-docs/a/b", { recursive: true });
