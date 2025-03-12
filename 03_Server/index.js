@@ -15,6 +15,7 @@ const myServer = http.createServer((req, res) => {
                 res.end("Not found")
         }
     })
+    
 
     // console.log(req); 
     // console.log("New request received"); // when a request comes, log 'new request received'
