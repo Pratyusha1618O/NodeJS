@@ -1,0 +1,20 @@
+REST API - JSON
+
+GET / users - HTML document render
+GET / api / users - list all users (in JSON format) ✅
+
+// Dynamic path parameters
+// GET / api / users / :id
+
+GET / api / users / 1 - get the user with id 1 ✅
+GET / api  / users / 2 - get the user with id 2 ✅
+
+POST / api  / users - create new user 
+
+PATCH / api  / users / id - edit the user with id 1
+
+DELETE / api  / users / 1 - delete the user with id 1
+
+
+// https://www.mockaroo.com/ 
+// generates dummy data for testing purpose

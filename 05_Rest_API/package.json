@@ -1,0 +1,15 @@
+{
+  "name": "05_rest_api",
+  "version": "1.0.0",
+  "description": "Building REST API's using Node and Express JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "Pratyusha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
