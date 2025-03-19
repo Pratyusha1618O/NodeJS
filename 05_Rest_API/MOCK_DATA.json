@@ -1,27 +1,19 @@
 [
   {
     "id": 1,
-    "first_name": "Eberto",
-    "last_name": "Wolters",
-    "email": "ewolters0@live.com",
-    "gender": "Male",
-    "job_title": "Associate Professor"
+    "first_name": "Monalisa",
+    "last_name": "Khan",
+    "email": "mona@gmail.com",
+    "gender": "female",
+    "job_title": "software dev"
   },
   {
     "id": 2,
-    "first_name": "Deny",
-    "last_name": "Michieli",
-    "email": "dmichieli1@ucoz.com",
-    "gender": "Female",
-    "job_title": "Assistant Manager"
-  },
-  {
-    "id": 3,
-    "first_name": "Katinka",
-    "last_name": "Borges",
-    "email": "kborges2@shinystat.com",
-    "gender": "Female",
-    "job_title": "Electrical Engineer"
+    "first_name": "Rimi",
+    "last_name": "Sen",
+    "email": "rimisen@gmail.com",
+    "gender": "female",
+    "job_title": "Assistant prof."
   },
   {
     "id": 4,
@@ -30,14 +22,6 @@
     "email": "jgertray3@businessinsider.com",
     "gender": "Female",
     "job_title": "Senior Cost Accountant"
-  },
-  {
-    "id": 5,
-    "first_name": "Lizzie",
-    "last_name": "Follitt",
-    "email": "lfollitt4@bbc.co.uk",
-    "gender": "Female",
-    "job_title": "Actuary"
   },
   {
     "id": 6,
@@ -7998,5 +7982,37 @@
     "email": "dbrokerr@canalblog.com",
     "gender": "Non-binary",
     "job_title": "GIS Technical Architect"
+  },
+  {
+    "first_name": "Pratyusha",
+    "last_name": "Bhandary",
+    "email": "pratyu@gmail.com",
+    "gender": "female",
+    "job_title": "Software Developer",
+    "id": 1001
+  },
+  {
+    "first_name": "Trisha",
+    "last_name": "Halder",
+    "email": "trisha@gmail.com",
+    "gender": "female",
+    "job_title": "Data Analyst",
+    "id": 1002
+  },
+  {
+    "first_name": "Riya",
+    "last_name": "Das",
+    "email": "riya@gmail.com",
+    "gender": "female",
+    "job_title": "Assistant prof.",
+    "id": 1003
+  },
+  {
+    "first_name": "Aditi",
+    "last_name": "Roy",
+    "email": "aditi@gmail.com",
+    "gender": "female",
+    "job_title": "software dev",
+    "id": 1004
   }
 ]

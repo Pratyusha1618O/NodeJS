@@ -1,8 +1,12 @@
 const express = require ('express');
 const users = require('./MOCK_DATA.json');
+const fs = require('fs');
 
 const app = express()
 const PORT = 8000;
+
+//middleware - plugin
+app.use(express.urlencoded({extended: false}))
 
 // Routes
 app.get('/users', (req, res)=>{
@@ -30,16 +34,37 @@ app.route('/api/users/:id')
         return res.json(user)
     })
     .patch((req, res)=> {
-        return res.json({ status: "pending" });
+        // edit the user with id 1
+        const body = req.body;
+        const id = Number(req.params.id);
+        let userIndex = users.findIndex((user) => user.id === id)
+
+        users[userIndex] = {...users[userIndex], ...body}
+        fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data)=>{
+            return res.json({ status: "success", id: id });
+        })
+     
     })
     .delete((req, res)=>{
-        return res.json({ status: "pending" });
+        // delete the user with id 1
+        const body = req.body;
+        const id = Number(req.params.id);
+        let userIndex = users.findIndex((user)=> user.id === id)
+
+        users.splice(userIndex, 1)
+        fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data)=>{
+            return res.json({ status: "success", id: id });
+        })
     })
 
 
 //create new user
 app.post('/api/users', (req,res)=>{
-    return res.json({ status: "pending" });
+    const body = req.body;
+    users.push({...body, id: users.length + 1});
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data)=>{
+        return res.json({ status: "success", id: users.length });
+    })
 })
 
 /*
