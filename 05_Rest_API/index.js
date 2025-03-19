@@ -88,6 +88,7 @@ app.post('/api/users', (req,res)=>{
     })
 })
 
+
 /*
 // get the user with id 1
 app.get('/api/users/:id', (req,res)=>{
