@@ -8,6 +8,27 @@ const PORT = 8000;
 //middleware - plugin
 app.use(express.urlencoded({extended: false}))
 
+
+//_______UNDERSTANDING MIDDLEWARE___________________________________________________________________________
+// middleware 1
+app.use((req, res, next) => {
+    console.log("Hello from middleware 1")
+    req.myusername = "pratyu.dev"
+    // fs.appendFile("log.txt", `\n${Date.now}: ${req.method}: ${req.path}`, (err, data)=>{
+    //     next()
+    // })
+    next() 
+    // calling next function => executes next operation, if there is another middleare then that will execute
+})
+
+//middleware 2
+app.use((req, res, next) => {
+    console.log("Hello from middleware 2", req.myusername)
+    next()
+})
+//______________________________________________________________________________________________________
+
+
 // Routes
 app.get('/users', (req, res)=>{
     const html = `
