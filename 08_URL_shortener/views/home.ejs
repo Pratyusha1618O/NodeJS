@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-</head>
-<body>
-    <h1>Hey from server</h1>
-    <h1>Homepage</h1>
-    <% urls.forEach(element =>  { %>
-        <li><% url.shortId %></li>
-    <% }%>
-    
-</body>
+  </head>
+  <body>
+    <h1>URL shortner</h1>
+    <div>
+      <form method="POST" action="/url">
+        <label for="">Enter your original URL</label>
+        <input
+          type="text"
+          placeholder="https://example.com"
+          name="redirectURL"
+        />
+        <button type="submit">GENERATE</button>
+      </form>
+    </div>
+  </body>
 </html>
